@@ -1,0 +1,115 @@
+/* Body & Flex Setup */
+body {
+  font-family: 'Comic Sans MS', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: #0288d1;
+  color: white;
+
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 33px;
+}
+
+/* Container Grid */
+.bank-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+/* Card Base Style */
+.card {
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 250px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+  font-size: 1.3em;
+  margin-bottom: 12px;
+}
+
+/* Card Colors */
+.create-card { background: #b2ebf2; color: #006064; }
+.transaction-card { background: #c5cae9; color: #283593; }
+.transfer-card { background: #ffccbc; color: #bf360c; }
+.history-card { background: #dcedc8; color: #33691e; }
+
+/* Inputs & Buttons */
+input, select {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid #90a4ae;
+  border-radius: 10px;
+  font-size: 0.95em;
+  background: #ffffff;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95em;
+  cursor: pointer;
+  margin: 5px;
+  color: white;
+  background: #0288d1;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #01579b;
+}
+
+/* Messages */
+.msg { font-size: 0.9em; color: #00796b; margin-top: 5px; }
+
+/* Transaction / Account Cards */
+#transactionList .transaction-card, #accountsList .account-card {
+  background: #ffffff;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  padding: 15px;
+  font-size: 0.85em;
+  color: #555;
+  border-top: 1px solid #90a4ae;
+  text-align: center;
+  background: #b2ebf2;
+}
