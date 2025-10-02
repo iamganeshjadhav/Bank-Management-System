@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>💸 My Casual Bank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>💸 My Casual Bank</h1>
+    <p>Your friendly bank for deposits, transfers, and fun transactions!</p>
+  </header>
+
+  <!-- Bank Cards -->
+  <div class="bank-container">
+    <!-- Create Account -->
+    <div class="card create-card">
+      <h2>👤 Create Account</h2>
+      <input type="text" id="owner" placeholder="Owner Name">
+      <input type="number" id="balance" placeholder="Initial Balance">
+      <select id="accountType">
+        <option value="" disabled selected>Select Account</option>
+        <option value="savings">Savings Account</option>
+        <option value="current">Current Account</option>
+      </select>
+      <button onclick="createAccount()">🎉 Create Account</button>
+      <p id="createMsg" class="msg"></p>
+    </div>
+
+    <!-- Deposit / Withdraw -->
+    <div class="card transaction-card">
+      <h2>💰 Deposit / Withdraw</h2>
+      <input type="number" id="accNum" placeholder="Account Number">
+      <input type="number" id="amount" placeholder="Amount">
+      <button onclick="deposit()">⬆ Deposit</button>
+      <button onclick="withdraw()">⬇ Withdraw</button>
+      <p id="transactionMsg" class="msg"></p>
+    </div>
+
+    <!-- Transfer -->
+    <div class="card transfer-card">
+      <h2>🔄 Transfer Funds</h2>
+      <input type="number" id="fromAcc" placeholder="From Account">
+      <input type="number" id="toAcc" placeholder="To Account">
+      <input type="number" id="transferAmt" placeholder="Amount">
+      <button onclick="transferFunds()">🚀 Transfer</button>
+      <p id="transferMsg" class="msg"></p>
+    </div>
+
+    <!-- Balance & Transactions -->
+    <div class="card history-card">
+      <h2>📊 Check Balance & History</h2>
+      <input type="number" id="checkAcc" placeholder="Account Number">
+      <button onclick="checkBalance()">💵 Check Balance</button>
+      <button onclick="showTransactions()">📝 Show Transactions</button>
+      <div id="balanceMsg" class="msg"></div>
+      <div id="transactionList"></div>
+    </div>
+  </div>
+
+  <!-- Account List -->
+  <div id="accountsList" class="bank-container"></div>
+
+  <footer>
+    <p>Made with ❤️ using JS & OOP | Enjoy managing your money!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
